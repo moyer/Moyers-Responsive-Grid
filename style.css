@@ -135,7 +135,7 @@ section {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 1.5em;
+  padding: 0 .75em;
   /* Gutter size! */
 
   float: left;
