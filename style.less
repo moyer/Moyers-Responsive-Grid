@@ -1,0 +1,175 @@
+/* =============================================================================
+   Eric Meyer Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+/* =============================================================================
+   Grid System
+   Author: Will Moyer
+   Site: www.willmoyer.com
+
+   Also see: 
+   http://goldengridsystem.com/
+   http://www.getskeleton.com/
+
+   Column Size: 100% / 12 = 8.3333%
+   Margin Size: Line Height = 1.5em
+   ========================================================================== */
+    
+  .container                                  { position: relative; overflow: hidden; }
+  
+  .row                                        { max-width: 520px; margin: 0 auto; overflow: hidden; }
+
+  .ie .row                                    { width: 520px; }
+
+  .container .column {  
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing: border-box; 
+   -o-box-sizing: border-box; 
+   box-sizing: border-box;
+   padding: 0 1.5em; /* Gutter size! */
+   float: left;
+   
+   /* Small Screens and No Media Queries (IE) */
+   width: 100%;  /* Every column now 100% */
+   margin-bottom: 0; /* Change to adjust spacing between stacked columns */
+  }
+
+  .container .offset-by-one,
+  .container .offset-by-two,
+  .container .offset-by-three,
+  .container .offset-by-four,
+  .container .offset-by-five,
+  .container .offset-by-six,
+  .container .offset-by-seven,
+  .container .offset-by-eight,
+  .container .offset-by-nine,
+  .container .offset-by-ten,
+  .container .offset-by-eleven                  { margin-left: 0%; }
+
+  @media only screen and (min-width: 768px) {
+
+    .row                                        { max-width: 100%;   } /* Change to set maximum page width */
+
+    .container .column                          { margin: 0;         }
+
+    .container .one.column                      { width: 8.333333%;  }
+    .container .two.column                      { width: 16.666666%; }
+    .container .three.column                    { width: 24.999999%; }
+    .container .four.column                     { width: 33.333332%; }
+    .container .five.column                     { width: 41.666665%; }
+    .container .six.column                      { width: 49.999998%; }
+    .container .seven.column                    { width: 58.333331%; }
+    .container .eight.column                    { width: 66.666664%; }
+    .container .nine.column                     { width: 74.999997%; }
+    .container .ten.column                      { width: 83.333333%; }
+    .container .eleven.column                   { width: 91.666663%; }
+    .container .twelve.column                   { width: 99.999996%; }
+
+    .container .one-third.column                { width: 33.333333%; }
+    .container .two-thirds.column               { width: 66.666666%; }
+
+    .container .offset-by-one                   { margin-left: 8.333333%;  }
+    .container .offset-by-two                   { margin-left: 16.666666%; }
+    .container .offset-by-three                 { margin-left: 24.999999%; }
+    .container .offset-by-four                  { margin-left: 33.333332%; }
+    .container .offset-by-five                  { margin-left: 41.666665%; }
+    .container .offset-by-six                   { margin-left: 49.999998%; }
+    .container .offset-by-seven                 { margin-left: 58.333331%; }
+    .container .offset-by-eight                 { margin-left: 66.666664%; }
+    .container .offset-by-nine                  { margin-left: 74.999997%; }
+    .container .offset-by-ten                   { margin-left: 83.333333%; }
+    .container .offset-by-eleven                { margin-left: 91.666663%; }
+  
+  }
+
+/* Responsive Images */
+
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.ie img,
+.ie object,
+.ie embed,
+.ie video {
+     width: 100%;
+}
+
+
+/* =============================================================================
+   Your Styles!
+
+   Author: 
+   Site: 
+
+   ========================================================================== */
+
+/* Example */
+span {
+  background: #e5e5e5;
+  display: block;
+  margin: 0.75em 0;
+  color: #444;
+  text-align: center;
+  font: .75em/3em sans-serif;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+
+
+
+
+/* =============================================================================
+   Media Queries
+
+   Currently resizes text at different breakpoints.
+   (I used the HTML element so that it would work with rems.)
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+    html {font-size: 87.5%;}
+  }
+
+@media only screen and (min-width: 768px) {
+    html {font-size: 100%;}
+  }
+
+@media only screen and (min-width: 1200px) {
+    html {font-size: 125%;}
+  }
