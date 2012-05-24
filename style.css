@@ -45,72 +45,72 @@ footer, header, hgroup, menu, nav, section {
    Margin Size: Line Height = 1.5em
    ========================================================================== */
     
-  .container                                  { position: relative; overflow: hidden; }
-  
-  .row                                        { max-width: 520px; margin: 0 auto; overflow: hidden; }
+.row {
+  margin: 0 auto;
+  max-width: 960px; /* Maximum page width */
+}
 
-  .ie .row                                    { width: 520px; }
-
-  .container .column {  
-   -webkit-box-sizing: border-box; 
-   -moz-box-sizing: border-box; 
-   -o-box-sizing: border-box; 
-   box-sizing: border-box;
-   padding: 0 .75em; /* Gutter size! */
+.column {  
+   -webkit-box-sizing: border-box; /* Gutters are now *inside* each column */
+      -moz-box-sizing: border-box; 
+        -o-box-sizing: border-box; 
+           box-sizing: border-box;
+   padding: 0; /* No gutters for single column */
    float: left;
    
    /* Small Screens and No Media Queries (IE) */
+   
    width: 100%;  /* Every column now 100% */
-   margin-bottom: 0; /* Change to adjust spacing between stacked columns */
-  }
+   margin-bottom: 0.5em; /* Change to adjust spacing between stacked columns */
+}
 
-  .container .offset-by-one,
-  .container .offset-by-two,
-  .container .offset-by-three,
-  .container .offset-by-four,
-  .container .offset-by-five,
-  .container .offset-by-six,
-  .container .offset-by-seven,
-  .container .offset-by-eight,
-  .container .offset-by-nine,
-  .container .offset-by-ten,
-  .container .offset-by-eleven                  { margin-left: 0%; }
+.offset-by-one,
+.offset-by-two,
+.offset-by-three,
+.offset-by-four,
+.offset-by-five,
+.offset-by-six,
+.offset-by-seven,
+.offset-by-eight,
+.offset-by-nine,
+.offset-by-ten,
+.offset-by-eleven                  { margin-left: 0%; }
 
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
-    .row                                        { max-width: 100%;   } /* Change to set maximum page width */
+.column { 
+  padding: 0 .5em; /* Gutter size! */
+}
 
-    .container .column                          { margin: 0;         }
+.one.column                      { width: 8.333333%;  }
+.two.column                      { width: 16.666666%; }
+.three.column                    { width: 24.999999%; }
+.four.column                     { width: 33.333332%; }
+.five.column                     { width: 41.666665%; }
+.six.column                      { width: 49.999998%; }
+.seven.column                    { width: 58.333331%; }
+.eight.column                    { width: 66.666664%; }
+.nine.column                     { width: 74.999997%; }
+.ten.column                      { width: 83.333333%; }
+.eleven.column                   { width: 91.666663%; }
+.twelve.column                   { width: 100%; }
 
-    .container .one.column                      { width: 8.333333%;  }
-    .container .two.column                      { width: 16.666666%; }
-    .container .three.column                    { width: 24.999999%; }
-    .container .four.column                     { width: 33.333332%; }
-    .container .five.column                     { width: 41.666665%; }
-    .container .six.column                      { width: 49.999998%; }
-    .container .seven.column                    { width: 58.333331%; }
-    .container .eight.column                    { width: 66.666664%; }
-    .container .nine.column                     { width: 74.999997%; }
-    .container .ten.column                      { width: 83.333333%; }
-    .container .eleven.column                   { width: 91.666663%; }
-    .container .twelve.column                   { width: 99.999996%; }
+.one-third.column                { width: 33.333333%; }
+.two-thirds.column               { width: 66.666666%; }
 
-    .container .one-third.column                { width: 33.333333%; }
-    .container .two-thirds.column               { width: 66.666666%; }
-
-    .container .offset-by-one                   { margin-left: 8.333333%;  }
-    .container .offset-by-two                   { margin-left: 16.666666%; }
-    .container .offset-by-three                 { margin-left: 24.999999%; }
-    .container .offset-by-four                  { margin-left: 33.333332%; }
-    .container .offset-by-five                  { margin-left: 41.666665%; }
-    .container .offset-by-six                   { margin-left: 49.999998%; }
-    .container .offset-by-seven                 { margin-left: 58.333331%; }
-    .container .offset-by-eight                 { margin-left: 66.666664%; }
-    .container .offset-by-nine                  { margin-left: 74.999997%; }
-    .container .offset-by-ten                   { margin-left: 83.333333%; }
-    .container .offset-by-eleven                { margin-left: 91.666663%; }
+.offset-by-one                   { margin-left: 8.333333%;  }
+.offset-by-two                   { margin-left: 16.666666%; }
+.offset-by-three                 { margin-left: 24.999999%; }
+.offset-by-four                  { margin-left: 33.333332%; }
+.offset-by-five                  { margin-left: 41.666665%; }
+.offset-by-six                   { margin-left: 49.999998%; }
+.offset-by-seven                 { margin-left: 58.333331%; }
+.offset-by-eight                 { margin-left: 66.666664%; }
+.offset-by-nine                  { margin-left: 74.999997%; }
+.offset-by-ten                   { margin-left: 83.333333%; }
+.offset-by-eleven                { margin-left: 91.666663%; }
   
-  }
+}
 
 /* Responsive Images */
 
@@ -143,7 +143,6 @@ video {
 span {
   background: #e5e5e5;
   display: block;
-  margin: 0.75em 0;
   color: #444;
   text-align: center;
   font: .75em/3em sans-serif;
